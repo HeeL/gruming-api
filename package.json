@@ -4,9 +4,11 @@
   "description": "API for checking articles for german words",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test istanbul cover _mocha && istanbul check-coverage",
+    "test": "npm run lint && npm run test:coverage",
     "test:quick": "NODE_ENV=test mocha",
-    "start": "node bin/www"
+    "test:coverage": "NODE_ENV=test istanbul cover _mocha && istanbul check-coverage",
+    "start": "node bin/www",
+    "lint": "eslint --cache test routes"
   },
   "author": "Sergii Paryzhskyi",
   "license": "ISC",
@@ -14,6 +16,8 @@
     "express": "^4.13.3"
   },
   "devDependencies": {
+    "eslint": "^1.10.3",
+    "babel-eslint": "^4.1.6",
     "chai": "^3.4.1",
     "istanbul": "^0.4.2",
     "mocha": "^2.3.4",
