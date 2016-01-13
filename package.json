@@ -4,7 +4,8 @@
   "description": "API for checking articles for german words",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha test/",
+    "test": "NODE_ENV=test istanbul cover _mocha && istanbul check-coverage",
+    "test:quick": "NODE_ENV=test mocha",
     "start": "node bin/www"
   },
   "author": "Sergii Paryzhskyi",
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "chai": "^3.4.1",
+    "istanbul": "^0.4.2",
     "mocha": "^2.3.4",
     "supertest": "^1.1.0"
   }
