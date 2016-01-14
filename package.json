@@ -8,7 +8,7 @@
     "test:quick": "NODE_ENV=test mocha --compilers js:babel/register",
     "test:coverage": "istanbul cover _mocha -- --compilers js:babel/register && istanbul check-coverage",
     "start": "nodemon -- node_modules/babel/bin/babel-node.js bin/www",
-    "lint": "eslint --cache test routes"
+    "lint": "eslint --cache test src"
   },
   "author": "Sergii Paryzhskyi",
   "license": "ISC",

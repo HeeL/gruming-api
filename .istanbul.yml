@@ -3,6 +3,7 @@ instrumentation:
   default-excludes: true
   excludes:
     - 'build/**'
+    - 'src/lib/errorHandler.js'
   embed-source: false
   complete-copy: false
   include-all-sources: true
