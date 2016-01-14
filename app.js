@@ -1,9 +1,8 @@
-const express = require('express');
+import express from 'express';
+import words from './routes/v1/words';
+
 const app = express();
-
 app.use(express.static(__dirname + '/public'));
-
-const words = require('./routes/v1/words');
 app.use('/v1/words', words);
 
-module.exports = app;
+export default app;

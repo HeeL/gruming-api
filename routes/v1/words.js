@@ -13,4 +13,4 @@ router.get('/random', (req, res) => {
   res.send({message: 'OK3'});
 });
 
-module.exports = router;
+export default router;
