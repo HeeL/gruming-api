@@ -17,7 +17,8 @@
     "url": "https://github.com/HeeL/gruming-api.git"
   },
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "helmet": "^1.1.0"
   },
   "devDependencies": {
     "babel": "5.8.29",
