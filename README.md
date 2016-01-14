@@ -1,6 +1,17 @@
 # gruming-api
 API for checking articles for german words.
 
+
+# Routes
+
+```
+
+GET /v1/words
+
+```
+Response with OK and 200 status.
+
+
 # Install
 
 Require Node 5 and npm to be installed. To install dependencies run:
@@ -32,15 +43,6 @@ Running complete test suit will also trigger a linter and test coverage check th
 ```
 
 If you want to run only tests, without any additional checks, to make it as fast as possible, run `npm run test:quick`.
-
-# Routes
-
-```
-
-GET /v1/words
-
-```
-Response with OK and 200 status.
 
 # Contribute
 

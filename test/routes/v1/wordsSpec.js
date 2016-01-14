@@ -21,4 +21,17 @@ describe('Requests to the /v1/words path', function() {
       .expect(JSON.stringify({ message: 'OK' }), done);
   });
 
+  it('returns a JSON object', function(done) {
+    request(app)
+      .get('/v1/words/article')
+      .expect(JSON.stringify({ message: 'OK2' }), done);
+  });
+
+  it('returns a JSON object', function(done) {
+    request(app)
+      .get('/v1/words/random')
+      .expect(JSON.stringify({ message: 'OK3' }), done);
+  });
+
+
 });
