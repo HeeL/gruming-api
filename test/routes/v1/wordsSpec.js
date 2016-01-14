@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../../../app';
+import app from '../../../src/app';
 
 describe('Requests to the /v1/words path', function() {
 
@@ -33,5 +33,15 @@ describe('Requests to the /v1/words path', function() {
       .expect(JSON.stringify({ message: 'OK3' }), done);
   });
 
+});
+
+
+describe('Requests to the /404', function() {
+
+  it('returns a 404 status code', function(done) {
+    request(app)
+      .get('/404')
+      .expect(404, done);
+  });
 
 });
