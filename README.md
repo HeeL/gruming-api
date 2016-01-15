@@ -26,7 +26,7 @@ Require npm and Node (version specified in package.json and .nvmrc) to be instal
 
 ```
 
-    npm start
+    npm run dev
 
 ```
 Server will be running on port 3000 and accessible on http://localhost:3000
