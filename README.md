@@ -14,7 +14,7 @@ Response with OK and 200 status.
 
 # Install
 
-Require Node 5 and npm to be installed. To install dependencies run:
+Require npm and Node (version specified in package.json and .nvmrc) to be installed. To install dependencies simply run:
 
 ```
 

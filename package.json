@@ -21,6 +21,9 @@
     "express": "^4.13.3",
     "helmet": "^1.1.0"
   },
+  "engines": {
+    "node": "5.4.1"
+  },
   "devDependencies": {
     "babel": "5.8.29",
     "babel-eslint": "^4.1.6",
