@@ -14,11 +14,19 @@ Response with OK and 200 status.
 
 # Install
 
-Require npm and Node (version specified in package.json and .nvmrc) to be installed. To install dependencies simply run:
+You will need a MongoDB >= 3 to be installed. The required version of Node is specified in package.json and .nvmrc. You can then install all dependencies by simply running:
 
 ```
 
     npm install
+
+```
+
+There is a seed data in `data/words.json`, they can be imported in mongo by running this task:
+
+```
+
+    npm run data:import
 
 ```
 
