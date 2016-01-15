@@ -50,6 +50,7 @@ Server will be running on port 3000 and accessible on http://localhost:3000
 
 # Test
 
+Before you run the tests you will need a running mongod with imported data as described above.
 Running complete test suit will also trigger a linter and test coverage check that should be always on 100%:
 
 ```
