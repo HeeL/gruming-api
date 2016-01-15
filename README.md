@@ -6,11 +6,19 @@ API for checking articles for german words.
 
 ```
 
-GET /v1/words
+GET /v1/words/random
 
 ```
-Response with OK and 200 status.
 
+Returns random word and a corresponding article to it. Success response has status 200 and JSON format like this:
+
+```json
+{
+    "article": "der",
+    "word": "Wettbewerb"
+}
+
+```
 
 # Install
 

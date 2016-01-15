@@ -1,16 +1,16 @@
 import express from 'express';
+import mongo from '../../lib/mongoConnection';
+import wordModel from '../../models/word';
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send({message: 'OK'});
-});
-
-router.get('/article', (req, res) => {
-  res.send({message: 'OK2'});
-});
-
-router.get('/random', (req, res) => {
-  res.send({message: 'OK3'});
+router.get('/random', (req, res, next) => {
+    wordModel.count().exec((err, wordsCount) => {
+        const random =  Math.floor((Math.random() * wordsCount));
+        wordModel.findOne({}, 'word article -_id').limit(-1).skip(random).exec(function (err, word) {
+            res.json(word);
+        });
+    });
 });
 
 export default router;
