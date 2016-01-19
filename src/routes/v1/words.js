@@ -1,5 +1,5 @@
 import express from 'express';
-import mongo from '../../lib/mongoConnection';
+import '../../lib/mongoConnection';
 import wordModel from '../../models/word';
 
 const router = express.Router();
