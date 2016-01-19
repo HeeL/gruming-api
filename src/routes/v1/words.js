@@ -5,11 +5,14 @@ import wordModel from '../../models/word';
 const router = express.Router();
 
 router.get('/random', (req, res, next) => {
-    wordModel.count().exec((err, wordsCount) => {
-        const random =  Math.floor((Math.random() * wordsCount));
-        wordModel.findOne({}, 'word article -_id').limit(-1).skip(random).exec(function (err, word) {
-            res.json(word);
-        });
+    wordModel.count().execAsync().then((wordsCount) => {
+        return Math.floor((Math.random() * wordsCount));
+    }).then((randomNumber) => {
+        return wordModel.findOne({}, 'word article -_id').limit(-1).skip(randomNumber).execAsync();
+    }).then((word) => {
+        res.json(word);
+    }).catch((error) => {
+        next(error);
     });
 });
 
