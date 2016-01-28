@@ -1,11 +1,13 @@
 import express from 'express';
-import '../../lib/mongoConnection';
+import mongoConnection from '../../lib/mongoConnection';
 import wordModel from '../../models/word';
 
 const router = express.Router();
 
 router.get('/random', (req, res, next) => {
-    wordModel.count().execAsync().then((wordsCount) => {
+    mongoConnection();
+    wordModel.count().execAsync()
+    .then((wordsCount) => {
         return Math.floor((Math.random() * wordsCount));
     }).then((randomNumber) => {
         return wordModel.findOne({}, 'word article -_id').limit(-1).skip(randomNumber).execAsync();

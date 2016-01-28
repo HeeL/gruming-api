@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run lint && npm run test:coverage",
-    "test:quick": "NODE_ENV=test mocha --compilers js:babel/register",
+    "test:unit": "NODE_ENV=test mocha test/unit --compilers js:babel/register",
+    "test:integration": "NODE_ENV=test mocha test/integration --compilers js:babel/register",
     "test:coverage": "istanbul cover _mocha -- --compilers js:babel/register && istanbul check-coverage",
     "start": "node bin/www",
     "dev": "nodemon -- node_modules/babel/bin/babel-node.js bin/www",
@@ -36,6 +37,8 @@
     "mocha": "^2.3.4",
     "nodemon": "^1.8.1",
     "sinon": "^1.17.2",
+    "sinon-as-promised": "^4.0.0",
+    "sinon-mongoose": "^1.2.1",
     "supertest": "^1.1.0"
   }
 }

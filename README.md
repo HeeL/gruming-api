@@ -50,8 +50,7 @@ Server will be running on port 3000 and accessible on http://localhost:3000
 
 # Test
 
-Before you run the tests you will need a running mongod with imported data as described above.
-Running complete test suit will also trigger a linter and test coverage check that should be always on 100%:
+There are unit and integration tests. If you want to run the whole test suite you need to make sure that mongod instance is running and the data imported to MongoDB as described above. Running complete test suit will also trigger a linter and test coverage check that should be always on 100%:
 
 ```
 
@@ -59,7 +58,7 @@ Running complete test suit will also trigger a linter and test coverage check th
 
 ```
 
-If you want to run only tests, without any additional checks, to make it as fast as possible, run `npm run test:quick`.
+If you just want to run quickly only unit tests without any additional checks, run `npm run test:unit`. In this case you won't need to run a mongod instance.
 
 # Contribute
 
