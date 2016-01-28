@@ -9,9 +9,6 @@ const app = express();
 app.use(helmet());
 app.disable('x-powered-by');
 
-// static
-app.use(express.static(__dirname + '../public'));
-
 // api routes
 app.use('/v1/words', words);
 
